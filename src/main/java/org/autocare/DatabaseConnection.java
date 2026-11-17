@@ -5,18 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/autocare_db";
-    private static final String USER = "root";
-    private static final String PASS = "";
+    // Bisa diganti lewat environment variable, default-nya untuk XAMPP/MySQL lokal
+    private static final String URL  = System.getenv().getOrDefault("AUTOCARE_DB_URL", "jdbc:mysql://localhost:3306/autocare_db");
+    private static final String USER = System.getenv().getOrDefault("AUTOCARE_DB_USER", "root");
+    private static final String PASS = System.getenv().getOrDefault("AUTOCARE_DB_PASS", "");
 
-    public static Connection getConnection() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(URL, USER, PASS);
-            System.out.println("Koneksi Database Berhasil!");
-        } catch (SQLException e) {
-            System.out.println("Koneksi Database Gagal: " + e.getMessage());
-        }
-        return conn;
+    // Melempar SQLException (bukan return null) supaya error bisa ditangkap & ditampilkan lewat Alert
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASS);
     }
 }

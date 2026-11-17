@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS autocare_db;
+USE autocare_db;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS kendaraan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipe VARCHAR(10) NOT NULL,
+    plat_nomor VARCHAR(15) NOT NULL UNIQUE,
+    merk VARCHAR(50) NOT NULL,
+    pemilik VARCHAR(100) NOT NULL,
+    khusus VARCHAR(20) NOT NULL
+);
+
+INSERT IGNORE INTO users (username, password) VALUES ('admin', 'admin123');
