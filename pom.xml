@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>autocare.org</groupId>
-    <artifactId>AutoCare</artifactId>
+    <groupId>org.otocare</groupId>
+    <artifactId>OtoCare</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -39,7 +39,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>org.autocare.Main</mainClass>
+                    <mainClass>org.otocare.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

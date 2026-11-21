@@ -1,0 +1,210 @@
+/* ===== AutoOto Neo-Brutalism (desain Stitch) =====
+   Font: Space Grotesk / Plus Jakarta Sans / JetBrains Mono bila terpasang di komputer,
+   jika tidak JavaFX memakai font cadangan (Segoe UI / Consolas). */
+.root {
+    -fx-font-family: "Plus Jakarta Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-base: #ffffff;
+    -fx-background: #FDFBF7;
+    -fx-text-fill: #111111;
+}
+.label { -fx-text-fill: #111111; }
+
+/* ----- Sidebar ----- */
+.sidebar { -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 0 3 0 0; }
+.side-brand-box { -fx-padding: 24 20 24 20; }
+.side-brand {
+    -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 22px; -fx-font-weight: bold;
+    -fx-text-fill: #111111; -fx-background-color: #FFDE59; -fx-border-color: #111111; -fx-border-width: 2.5;
+    -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 6 14;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 4, 4);
+}
+.side-brand-sub { -fx-text-fill: #4A463C; -fx-font-size: 10px; -fx-font-weight: bold; -fx-padding: 8 0 0 2; }
+.nav-btn {
+    -fx-background-color: transparent; -fx-text-fill: #111111; -fx-alignment: CENTER_LEFT;
+    -fx-padding: 11 16; -fx-cursor: hand; -fx-font-size: 13px; -fx-font-weight: bold;
+    -fx-border-color: transparent; -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4;
+}
+.nav-btn:hover { -fx-background-color: #F3EFE6; }
+.nav-aktif, .nav-aktif:hover {
+    -fx-background-color: #FFDE59; -fx-border-color: #111111; -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
+.sidebar .nav-btn { -fx-background-insets: 0; }
+.side-bawah { -fx-padding: 16 16 20 16; -fx-border-color: #111111; -fx-border-width: 2 0 0 0; }
+.notif-btn {
+    -fx-background-color: #F3EFE6; -fx-text-fill: #111111; -fx-border-color: #111111; -fx-border-width: 2;
+    -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 8 12; -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT; -fx-font-weight: bold; -fx-font-size: 12px;
+}
+.notif-btn:hover { -fx-background-color: #FFDE59; }
+.notif-aktif { -fx-background-color: #FF5757; -fx-text-fill: #111111; }
+.notif-aktif:hover { -fx-background-color: #FF7A7A; }
+.avatar {
+    -fx-background-color: #38B6FF; -fx-text-fill: #111111; -fx-font-weight: bold;
+    -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;
+    -fx-min-width: 38; -fx-min-height: 38; -fx-max-width: 38; -fx-max-height: 38;
+}
+.side-user { -fx-text-fill: #111111; -fx-font-weight: bold; }
+.side-role { -fx-text-fill: #4A463C; -fx-font-size: 11px; }
+.keluar-btn {
+    -fx-background-color: #ffffff; -fx-text-fill: #111111; -fx-font-weight: bold; -fx-border-color: #111111;
+    -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 8 12; -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
+.keluar-btn:hover { -fx-background-color: #FF6B35; }
+.keluar-btn:pressed { -fx-effect: null; -fx-padding: 11 9 5 15; }
+
+/* ----- Konten & teks ----- */
+.konten { -fx-background-color: #FDFBF7; -fx-padding: 32; }
+.page-title {
+    -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 28px; -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+.panel-title { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 18px; -fx-font-weight: bold; }
+.section-title { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 15px; -fx-font-weight: bold; }
+.modal-title { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 18px; -fx-font-weight: bold; }
+.muted { -fx-text-fill: #4A463C; }
+.muted-sm { -fx-text-fill: #4A463C; -fx-font-size: 12px; }
+.field-label { -fx-text-fill: #111111; -fx-font-size: 11px; -fx-font-weight: bold; }
+.cell-title { -fx-font-weight: bold; -fx-text-fill: #111111; }
+.teks-bahaya { -fx-text-fill: #D62828; -fx-font-size: 12px; -fx-font-weight: bold; }
+.mono { -fx-font-family: "JetBrains Mono", "Consolas", "Courier New", monospace; -fx-font-size: 12px; -fx-font-weight: bold; }
+.biaya { -fx-font-family: "JetBrains Mono", "Consolas", monospace; -fx-font-weight: bold; -fx-text-fill: #111111; }
+
+/* ----- Kartu / panel (border hitam + bayangan keras) ----- */
+.card, .panel, .kpi-card, .garasi-card {
+    -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 2.5;
+    -fx-border-radius: 4; -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 5, 5);
+}
+.card { -fx-padding: 18; }
+.kpi-card { -fx-padding: 18 20; }
+.kpi-biru { -fx-background-color: #BAE6FD; }
+.kpi-koral { -fx-background-color: #FECACA; }
+.kpi-mint { -fx-background-color: #BBF7D0; }
+.kpi-label { -fx-text-fill: #111111; -fx-font-size: 11px; -fx-font-weight: bold; }
+.kpi-value { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #111111; }
+.panel-head { -fx-padding: 16 20; -fx-border-color: #111111; -fx-border-width: 0 0 2.5 0; -fx-background-color: #FFDE59; }
+.garasi-card { -fx-padding: 18; }
+.card-title { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 17px; -fx-font-weight: bold; }
+.plat-pill {
+    -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4;
+    -fx-background-radius: 4; -fx-padding: 3 10; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 2, 2);
+}
+.blok-odometer { -fx-background-color: #F4F1EA; -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 10 12; }
+.odometer { -fx-font-size: 22px; -fx-font-weight: bold; }
+.baris-detail { -fx-padding: 10 0; -fx-border-color: #111111; -fx-border-width: 0 0 1 0; }
+.grid-kartu { -fx-padding: 2 10 10 2; }
+
+/* ----- Tabel ----- */
+.tabel { -fx-background-color: #ffffff; }
+.th { -fx-background-color: #F3EFE6; -fx-padding: 10 16; -fx-border-color: #111111; -fx-border-width: 0 0 2.5 0; }
+.th-text { -fx-text-fill: #111111; -fx-font-size: 11px; -fx-font-weight: bold; }
+.td { -fx-padding: 12 16; -fx-border-color: #111111; -fx-border-width: 0 0 1 0; }
+
+/* ----- Scroll ----- */
+.scroll-pane { -fx-background-color: transparent; -fx-background: transparent; -fx-padding: 0; }
+.scroll-pane > .viewport { -fx-background-color: transparent; }
+.scroll-pane .corner { -fx-background-color: transparent; }
+.scroll-bar:vertical, .scroll-bar:horizontal { -fx-background-color: transparent; }
+.scroll-bar .thumb { -fx-background-color: #111111; -fx-background-radius: 2; }
+.scroll-bar .increment-button, .scroll-bar .decrement-button { -fx-padding: 0; -fx-opacity: 0; }
+
+/* ----- Tombol (tekan = bayangan hilang, tombol bergeser) ----- */
+.button { -fx-cursor: hand; }
+.btn-primary {
+    -fx-background-color: #FFDE59; -fx-text-fill: #111111; -fx-font-weight: bold;
+    -fx-border-color: #111111; -fx-border-width: 2.5; -fx-border-radius: 4; -fx-background-radius: 4;
+    -fx-padding: 9 18; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 4, 4);
+}
+.btn-primary:hover { -fx-background-color: #FFE97F; }
+.btn-primary:pressed { -fx-effect: null; -fx-padding: 13 14 5 22; }
+.btn-outline {
+    -fx-background-color: #ffffff; -fx-text-fill: #111111; -fx-font-weight: bold;
+    -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4;
+    -fx-padding: 9 16; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
+.btn-outline:hover { -fx-background-color: #BAE6FD; }
+.btn-outline:pressed { -fx-effect: null; -fx-padding: 12 13 6 19; }
+.btn-small { -fx-padding: 6 12; -fx-font-size: 12px; }
+.btn-link { -fx-background-color: transparent; -fx-text-fill: #111111; -fx-font-weight: bold; -fx-padding: 6 8; }
+.btn-link:hover { -fx-underline: true; }
+.btn-link-danger { -fx-background-color: transparent; -fx-text-fill: #D62828; -fx-font-weight: bold; -fx-padding: 6 8; }
+.btn-link-danger:hover { -fx-underline: true; }
+.tab {
+    -fx-background-color: #ffffff; -fx-text-fill: #111111; -fx-font-weight: bold; -fx-padding: 7 16;
+    -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4;
+}
+.tab:hover { -fx-background-color: #F3EFE6; }
+.tab-aktif, .tab-aktif:hover { -fx-background-color: #FFDE59; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3); }
+
+/* ----- Input ----- */
+.text-field, .password-field, .combo-box-base, .date-picker {
+    -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4;
+    -fx-background-radius: 4; -fx-padding: 7 10; -fx-font-weight: 600;
+}
+.text-field:focused, .password-field:focused, .combo-box-base:focused, .date-picker:focused {
+    -fx-background-color: #FFFBE0; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
+.combo-box-base, .date-picker { -fx-padding: 2 4; }
+.text-field:disabled, .date-picker:disabled { -fx-opacity: 0.5; }
+.radio-button:selected > .radio { -fx-background-color: #111111; }
+.radio-button .radio { -fx-border-color: #111111; -fx-border-width: 2; }
+.check-box .box { -fx-border-color: #111111; -fx-border-width: 2; -fx-background-radius: 2; -fx-border-radius: 2; }
+.check-box:selected > .box { -fx-background-color: #FFDE59; }
+
+/* ----- Badge ----- */
+.badge {
+    -fx-padding: 3 10; -fx-background-radius: 4; -fx-border-radius: 4; -fx-border-color: #111111; -fx-border-width: 2;
+    -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #111111;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 2, 2);
+}
+.badge-aman { -fx-background-color: #7ED957; }
+.badge-segera { -fx-background-color: #FFDE59; }
+.badge-jatuh { -fx-background-color: #FF5757; }
+.badge-mobil { -fx-background-color: #38B6FF; }
+.badge-motor { -fx-background-color: #C084FC; }
+.badge-count { -fx-background-color: #ffffff; }
+
+/* ----- Bar laporan ----- */
+.bar-track { -fx-background-color: #F3EFE6; -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 2; -fx-background-radius: 2; }
+.bar-fill { -fx-background-color: #38B6FF; -fx-border-color: #111111; -fx-border-width: 0 2 0 0; -fx-background-radius: 0; }
+.empty-state { -fx-text-fill: #4A463C; -fx-padding: 40; -fx-text-alignment: center; }
+
+/* ----- Modal ----- */
+.modal { -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 3; }
+.modal-head { -fx-padding: 18 24 14 24; -fx-background-color: #FFDE59; -fx-border-color: #111111; -fx-border-width: 0 0 3 0; }
+.modal-body { -fx-padding: 18 24; }
+.modal-foot { -fx-padding: 14 24; -fx-background-color: #F3EFE6; -fx-border-color: #111111; -fx-border-width: 3 0 0 0; }
+
+/* ----- Login / registrasi (split) ----- */
+.split-kiri { -fx-background-color: #FFDE59; -fx-border-color: #111111; -fx-border-width: 0 3 0 0; -fx-padding: 36 40 28 40; -fx-alignment: TOP_LEFT; }
+.split-brand {
+    -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-font-size: 26px; -fx-font-weight: bold;
+    -fx-text-fill: #111111; -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 2.5;
+    -fx-border-radius: 4; -fx-background-radius: 4; -fx-padding: 6 16; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 4, 4);
+}
+.split-title { -fx-font-family: "Space Grotesk", "Segoe UI", sans-serif; -fx-text-fill: #111111; -fx-font-size: 28px; -fx-font-weight: bold; }
+.split-sub { -fx-text-fill: #111111; -fx-font-size: 13px; }
+.chip {
+    -fx-background-color: #ffffff; -fx-border-color: #111111; -fx-border-width: 2; -fx-border-radius: 4;
+    -fx-background-radius: 4; -fx-padding: 6 12; -fx-font-weight: bold; -fx-font-size: 12px;
+    -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
+.split-kanan { -fx-background-color: #FDFBF7; -fx-padding: 48 56; -fx-alignment: CENTER_LEFT; }
+.svg-putih { -fx-fill: transparent; -fx-stroke: #111111; -fx-stroke-width: 2.5; -fx-stroke-line-cap: round; -fx-stroke-line-join: round; }
+.svg-muted { -fx-fill: #BAE6FD; -fx-stroke: #111111; -fx-stroke-width: 2; }
+.svg-biru { -fx-fill: transparent; -fx-stroke: #FF6B35; -fx-stroke-width: 4; -fx-stroke-line-cap: round; }
+.svg-jalan { -fx-fill: transparent; -fx-stroke: #111111; -fx-stroke-width: 3; }
+.svg-roda { -fx-fill: #ffffff; -fx-stroke: #111111; -fx-stroke-width: 3; }
+.svg-hub { -fx-fill: #111111; -fx-stroke: transparent; }
+
+/* ----- Dialog Alert ----- */
+.dialog-pane { -fx-background-color: #FDFBF7; -fx-border-color: #111111; -fx-border-width: 3; }
+.dialog-pane > .content.label { -fx-padding: 14 20; -fx-font-weight: bold; }
+.dialog-pane .button {
+    -fx-background-color: #FFDE59; -fx-text-fill: #111111; -fx-font-weight: bold; -fx-border-color: #111111;
+    -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 4; -fx-effect: dropshadow(gaussian, #111111, 0, 0, 3, 3);
+}
